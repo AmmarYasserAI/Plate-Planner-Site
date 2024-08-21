@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "maker";
     src: url(fonts/MARKER_CRE.ttf);
@@ -364,5 +365,199 @@ option:hover{
     color: black;
 }
 
+/* Universal styling - No color change */
+.feedback-section {
+    background-color: inherit; /* الحفاظ على لون الخلفية */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* Desktop screens */
+@media only screen and (min-width: 1025px) {
+    .ratings-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .feedback-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .recipe_info {
+        height: 300px;
+        width: 720px;
+        background-color: #b5c3b8;
+        border-left: 3px solid #000000;
+    }
+
+    .recipe_info p {
+        font-size: larger;
+    }
+
+    select {
+        height: 300px;
+        width: 720px;
+    }
+}
+
+/* Tablets screens */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .ratings-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .feedback-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .recipe_info {
+        height: auto;
+        width: 90%; /* نسبة مئوية لتكون أكثر مرونة */
+        background-color: #dff2ff;
+        border-left: 3px solid #5944ff;
+    }
+
+    select {
+        width: 90%; /* نسبة مئوية لتكون أكثر مرونة */
+        height: auto;
+    }
+
+    /* تحسين تخطيط الشبكة للأجهزة اللوحية */
+    .griduwu {
+        grid-template-columns: 1fr; /* عمود واحد للأجهزة اللوحية */
+        grid-gap: 1em;
+        padding: 20px;
+    }
+}
+
+/* Mobile screens */
+@media only screen and (max-width: 767px) {
+    .ratings-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .feedback-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .recipe_info {
+        height: auto;
+        width: 100%; /* ملء العرض بالكامل */
+        background-color: #dff2ff;
+        border-left: 3px solid #5944ff;
+        box-sizing: border-box; /* ضمان عدم تجاوز الحدود */
+    }
+
+    select {
+        width: 100%; /* ملء العرض بالكامل */
+        height: auto;
+        box-sizing: border-box; /* ضمان عدم تجاوز الحدود */
+    }
+
+    .meal, .recipe {
+        width: 100%; /* ملء العرض بالكامل */
+        text-align: center; /* محاذاة النصوص إلى الوسط */
+    }
+
+    h1, h2, p {
+        font-size: 1.2em; /* حجم خط أكبر لسهولة القراءة */
+        padding: 0.5em;
+    }
+
+    /* تقليص التباعد بين العناصر لتناسب الشاشات الصغيرة */
+    .griduwu {
+        grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة */
+        grid-gap: 1em;
+        padding: 20px;
+    }
+
+    /* تحسين المظهر العام للهواتف المحمولة */
+    header {
+        flex-direction: column; /* وضع عناصر الرأس عمودياً */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* ترتيب العناصر عمودياً في قائمة التنقل */
+    }
+
+    nav li {
+        margin: 0.5em 0; /* تقليل المسافة بين عناصر القائمة */
+    }
+
+    footer p {
+        font-size: 1em; /* تقليل حجم الخط ليتناسب مع الشاشات الصغيرة */
+    }
+}
+/* iPad Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .ratings-container,
+    .feedback-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .griduwu {
+        grid-template-columns: repeat(2, 1fr); /* تحسين توزيع العناصر */
+        grid-gap: 1.5em;
+        padding: 20px;
+    }
+
+    select {
+        height: 250px; /* ضبط ارتفاع select */
+        width: 300px; /* ضبط عرض select */
+    }
+
+    .recipe_info {
+        height: 250px; /* ضبط ارتفاع recipe_info */
+        width: 300px; /* ضبط عرض recipe_info */
+    }
+}
+
+/* iPad Portrait */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .ratings-container,
+    .feedback-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .griduwu {
+        grid-template-columns: 1fr; /* عمودي لأجهزة iPad في الوضع الرأسي */
+        grid-gap: 1em;
+        padding: 15px;
+    }
+
+    select {
+        height: 200px; /* ضبط ارتفاع select */
+        width: 280px; /* ضبط عرض select */
+    }
+
+    .recipe_info {
+        height: 200px; /* ضبط ارتفاع recipe_info */
+        width: 280px; /* ضبط عرض recipe_info */
+    }
+}
 
