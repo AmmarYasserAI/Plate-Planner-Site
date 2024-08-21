@@ -10,11 +10,11 @@
 
 body{
     margin: 0%;
-    background-color: #f8eded;
+    background-color: #160060;
 }
 
 section{
-    background-color: #f8eded;
+    background-color: #1a0080;
 }
 
 /**header*/
@@ -23,8 +23,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: #b43f3f;
-    background-image: url("../imgs/Contact.png");
+    background-color: #100068;
     margin: 0%;
 }
 
@@ -53,8 +52,17 @@ nav li{
 
 nav a{
     text-decoration: none;
-    color:#173b45;
+    color:#00232c;
     
+}
+
+#streak{
+    transition: 0.6s ease;
+}
+
+
+#streak span :hover{
+    scale: 1.9;
 }
 
 
@@ -101,25 +109,36 @@ footer p{
     height: fit-content;
     margin-top: auto;
     margin-bottom: auto;
+    font-size: 1.3em;
+    color: rgb(255, 255, 255);
+    transition: 0.6s ease;
+    font-weight: 500;
 }
+
+footer p:hover{
+    scale: 1.2;
+    color: #c9bfbf;
+    font-weight: 600;
+}
+
 
 
 /**recipe styling*/
 select{
     display: flex;
     flex-direction: column;
-    background-color: #f8f8f8;
+    background-color: #0000a0;
     width: fit-content;
     flex: 1;
     align-items: stretch;
-    border: 1px solid #ff8027;
+    border: 1px solid #904ef3;
     margin: 1em;
 }
 h1,
 h2,
 nav li{
     font-family: "maker";
-    color: #ff8027;
+    color: #000000;
     height: 30px;
 }
 
@@ -134,8 +153,19 @@ option,
 
 #recordStreak,
 #streak{
-    font-size: large;
+    font-size: 1.3em;
+    transition: 0.6s ease;
+    padding: 20px;
 }
+
+#recordStreak:hover{
+    scale: 1.2;
+    color: white;
+    background-color: #000000;
+    border-color: #ffffff;
+    border-width: 3px;
+}
+
 
 #button{
     background-color:#f8eded;
@@ -146,12 +176,12 @@ option,
 }
 
 #print{
-    font-size: 17px;
+    font-size: 22px;
     display: flex;
     padding: 10px 15px 10px 15px;
-    border-color: #173b45;
+    border-color: #05333f;
     color: #f8eded;
-    background-color: #ff8027;
+    background-color: #230551;
     text-decoration: none;
     display: inline-block;
 
@@ -163,12 +193,12 @@ option,
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: #b5c3b8;
-    border-left: 3px solid #ff8027;
+    background-color: #dff2ff;
+    border-left: 3px solid #5944ff;
 }
 
 .recipe_info h3{
-    background-color:#f8f8f8;
+    background-color:#5944ff;
     margin-bottom: 0%;
     font-size: 24px;
 }
@@ -188,11 +218,11 @@ option,
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: #b5c3b8;
+    background-color: hsl(231, 100%, 73%);
 }
 
 .flexx h1{
-    width: 150px;
+    width: 10px;
 }
 
 #flexx,
@@ -218,11 +248,29 @@ select{
 
 option{
     margin: 1em;
-    border: 1px solid #cfc5b3;
+    border: 1px solid #a09e99;
     font-size: 15px;
     font-weight: bold;
+    transition: 0.6s ease;
 }
 
+option:hover{
+    scale: 1.1;
+    background-color: #c9c9ff;
+}
+
+.tip{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    padding: 30px;
+    margin-bottom: 10px;
+    color: white;
+    padding: auto;
+    transition: 0.4s ease;
+}
+
+.tip:hover{
+    scale: 1.6;
+}
 
 .water{
     margin: 15px;
@@ -231,15 +279,15 @@ option{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    background-color:#b5c3b8;
+    background-color:#11087a;
     width: fit-content;
 }
 
 #massege{
-    background-color: #f8f8f8;
+    background-color: #7295ad;
     text-align: center;
     font-size: larger;
-    color: #173b45;
+    color: #ffffff;
 }
 
 @media print{
@@ -257,7 +305,7 @@ option{
     h1,
     h2{
     font-family: "ara_hamah_homs";
-    color: #ff8027;
+    color: #b6bdff;
     height: 30px;
     }
 
@@ -275,7 +323,7 @@ option{
         width: fit-content;
         flex: 1;
         align-items: stretch;
-        border: 1px solid #ff8027;
+        border: 1px solid #27cdff;
         margin: 1em;
     }
 
@@ -292,7 +340,7 @@ option{
         width: 720px;
         flex-direction: column;
         background-color: #b5c3b8;
-        border-left: 3px solid #ff8027;
+        border-left: 3px solid #000000;
     }
 
     .recipe_info p{
@@ -305,3 +353,16 @@ option{
         font-size: 20px;
     }
 }
+
+#print{
+    transition: 0.6s ease;
+}
+
+#print:hover{
+    scale: 1.2;
+    background-color: #f8eded;
+    color: black;
+}
+
+
+

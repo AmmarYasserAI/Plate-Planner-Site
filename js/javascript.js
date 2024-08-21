@@ -283,7 +283,7 @@ function updateStreak() {
 // Function to display streak
 function displayStreak(streak) {
     const streakElement = document.getElementById('streak');
-    streakElement.innerText = `Current Streak: ${streak}`;
+    streakElement.innerText = `Your Streaks: ${streak} day(s)`;
     if (streak > 0) {
         streakElement.classList.add('completed');
     } else {
@@ -296,3 +296,4 @@ document.getElementById('recordStreak').addEventListener('click', updateStreak);
 
 // Initial display of streak
 displayStreak(parseInt(localStorage.getItem('streak') || '0', 10));
+
