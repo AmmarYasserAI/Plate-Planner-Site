@@ -1,0 +1,307 @@
+@font-face {
+    font-family: "maker";
+    src: url(fonts/MARKER_CRE.ttf);
+}
+
+@font-face{
+    font-family: "ara_hamah_homs";
+    src: url(fonts/Ara\ Hamah\ Homs\ Regular.ttf)
+}
+
+body{
+    margin: 0%;
+    background-color: #f8eded;
+}
+
+section{
+    background-color: #f8eded;
+}
+
+/**header*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #b43f3f;
+    background-image: url("../imgs/Contact.png");
+    margin: 0%;
+}
+
+header img{
+    width: 11em;
+    padding: 0.5em;
+    object-fit: cover;
+}
+
+nav ul{
+    display: flex;
+    align-content: end;
+    margin-bottom: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 1em;
+    background-color: #f8eded;
+    background-image: url(../imgs/more-leaves-on-green.png);
+    margin-bottom: 0px;
+    padding: 0.3em;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+nav a{
+    text-decoration: none;
+    color:#173b45;
+    
+}
+
+
+/**grid for everthing*/
+#killmepart2{
+    display: grid;
+    grid-template-rows: 7em 1fr 15em;
+    background-image: url(../imgs/more-leaves-on-green.png)
+}
+#killme{
+    display: grid;
+    grid-template-rows: 7em auto auto auto 15em;
+}
+.griduwu{
+    /**just kill mee*/
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 2em;
+    padding: 50px;
+    background-color: #f8eded;
+    background-image: url(../imgs/more-leaves-on-green.png)
+;
+}
+
+section{
+    background-color: #f8eded;
+    background-image: url(../imgs/more-leaves-on-green.png)
+}
+
+footer{
+    background-color: #173b45;
+    background-image: url(../imgs/palet\ of\ death.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    color: #f8eded;
+}
+
+footer p{
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/**recipe styling*/
+select{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    width: fit-content;
+    flex: 1;
+    align-items: stretch;
+    border: 1px solid #ff8027;
+    margin: 1em;
+}
+h1,
+h2,
+nav li{
+    font-family: "maker";
+    color: #ff8027;
+    height: 30px;
+}
+
+p,
+option,
+#print,
+.recipe_info,
+#recordStreak,
+#streak{
+    font-family: "ara_hamah_homs";
+}
+
+#recordStreak,
+#streak{
+    font-size: large;
+}
+
+#button{
+    background-color:#f8eded;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../imgs/more-leaves-on-green.png)
+}
+
+#print{
+    font-size: 17px;
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    border-color: #173b45;
+    color: #f8eded;
+    background-color: #ff8027;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.recipe_info{
+    height: 228.400px;
+    width: 291.733px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #b5c3b8;
+    border-left: 3px solid #ff8027;
+}
+
+.recipe_info h3{
+    background-color:#f8f8f8;
+    margin-bottom: 0%;
+    font-size: 24px;
+}
+
+.recipe_info p{
+    margin: auto;
+    font-size: medium;
+}
+
+.ex{
+    width: auto;
+}
+
+#flexx{
+    margin: 5em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: #b5c3b8;
+}
+
+.flexx h1{
+    width: 150px;
+}
+
+#flexx,
+.recipe_info,
+.ex,
+button,
+select,
+option,
+.recipe_info h3,
+.water,
+#massege{
+    border-radius: 20px;
+    padding: 1em;
+}
+
+select{
+    width: 312px;
+    overflow: hidden;
+    padding-top: 0.5em;
+    height: 250px;
+    width: 320px
+}
+
+option{
+    margin: 1em;
+    border: 1px solid #cfc5b3;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.water{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#b5c3b8;
+    width: fit-content;
+}
+
+#massege{
+    background-color: #f8f8f8;
+    text-align: center;
+    font-size: larger;
+    color: #173b45;
+}
+
+@media print{
+    body{
+        visibility: hidden;
+    }
+    #printedPart{
+        visibility: visible;
+        overflow:visible;
+    }
+    .add{
+        visibility: hidden;
+    }
+
+    h1,
+    h2{
+    font-family: "ara_hamah_homs";
+    color: #ff8027;
+    height: 30px;
+    }
+
+    .griduwu{
+        /**just kill mee*/
+        grid-gap: 0em;
+}
+}
+
+@media (min-width:1000px) {
+    select{
+        display: flex;
+        flex-direction: column;
+        background-color: #f8f8f8;
+        width: fit-content;
+        flex: 1;
+        align-items: stretch;
+        border: 1px solid #ff8027;
+        margin: 1em;
+    }
+
+    select{
+        height: 300.400px;
+        width: 720px
+    }
+    
+    option{
+        font-size: 20px;
+    }
+    .recipe_info{
+        height: 300.400px;
+        width: 720px;
+        flex-direction: column;
+        background-color: #b5c3b8;
+        border-left: 3px solid #ff8027;
+    }
+
+    .recipe_info p{
+        margin: auto;
+        font-size: larger;
+    }
+
+    .recipe_info li{
+        margin: auto;
+        font-size: 20px;
+    }
+}

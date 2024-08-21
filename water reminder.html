@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/Plate Planner-modified.png" type="img/icon type">
+    <title></title>
+</head>
+<body>
+    <div id="killmepart2">
+        <header>
+            <img src="imgs/logo.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="">WATER REMINDER</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="water">
+            <img src="imgs/water-bottle.png" alt="water bottle">
+            <div id="massege">
+                <p>It's recomended to drink 3 liters of water daily!<br>
+                    you'll be alerted to drink water!
+                </p>
+            </div>
+        </section>
+        <footer>
+        </footer>
+    </div>
+    <script>
+        function remindToDrinkWater() {
+            alert("It's time to drink water!");
+        }
+
+        function requestNotificationPermission() {
+        if (Notification.permission === "default") {
+            Notification.requestPermission();
+        }
+        }
+
+        function notifyUser() {
+        if (Notification.permission === "granted") {
+            new Notification("Reminder", { body: "It's time to drink water!" });
+        }
+        }
+
+        function alertMassge() {
+            massege = document.getElementById("massege");
+            massege.innerHTML="<h2>! ! ! IT'S TIME TO DRINK WATER! ! !</h2>"
+        }
+        requestNotificationPermission();
+        setInterval(notifyUser, 3600000); // 1 hour
+        setInterval(remindToDrinkWater, 3600000); // 1 hour
+        setInterval(alertMassge, 3600000); // 1 hour
+    </script>
+</body>
+</html>
